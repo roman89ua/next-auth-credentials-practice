@@ -8,15 +8,9 @@ import { useRegister } from '@/queries/auth/register';
 import { useRegularForm } from '@/hooks';
 import { RegularFormProvider } from '@/providers/RegularFormProvider';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { loginSchema } from '@/components/schemas/loginSchema';
 import { registrationSchema } from '@/components/schemas/registrationSchema';
-import { useState } from 'react';
 
 const RegistrationPage = () => {
-  const [paswordVisibilityToggle, setPaswordVisibilityToggle] = useState<
-    'password' | 'text'
-  >('password');
-
   const formData = useRegularForm<RegistrationCredentialsType>({
     resolver: yupResolver(registrationSchema),
   });

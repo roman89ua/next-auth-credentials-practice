@@ -2,5 +2,12 @@
   "semi": true,
   "trailingComma": "es5",
   "singleQuote": true,
-  "tabWidth": 2
+  "tabWidth": 2,
+  "max-line-length": [
+    true,
+    {
+      "limit": 120,
+      "ignore-pattern": "^import |^export {(.*?)}"
+    }
+  ]
 }
